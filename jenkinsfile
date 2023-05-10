@@ -90,7 +90,7 @@ pipeline {
         }
         stage('Remove Unused Docker Image') {
             steps{
-                sh "Docker rmi $registry:V$BUILD_NUMBER"
+                sh "docker rmi $registry:V$BUILD_NUMBER"
             }
         }
         stage("Kubernetes Deploy") {
